@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #15101C;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Inter', sans-serif ;
+}
+
+.container{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.main{
+    margin: 146px auto;
+    display: flex;
+    margin-bottom: 0px;
+
+}
+#inputs {
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    
+}
+#inputs > #inp1{
+    background-color: transparent;
+    width: 381px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid #3E1671;
+    padding-left:15px;
+    color: #777;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#inputs > #btn1{
+    background-color: #9E78CF;
+    width: 40px;
+    height: 42px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#inputs > #btn1 :hover{
+    background-color: #1f0541;
+    width: 40px;
+    height: 42px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    filter: drop-shadow(0 0 7px #1f6c92f5);
+}
+#inputs > #inp1:hover{
+    background-color: #1f0541;
+    filter: drop-shadow(0 0 7px #1f6c92f5);
+    transition: all 0.2s ease-in-out;
+}
+
+
+#wrapper{
+    padding-top: 22px;
+    padding-right: 20px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width:425px;
+    height:75px;
+    display:block;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    align-items: center;
+    width:425px;
+    height:75px;
+    border: 1px,solid #3E1671;
+    border-radius: 10px;
+    background-color:#15101C ;
+    padding-right: 24px;
+}
+.card:hover{
+    filter: drop-shadow(0 0 7px #1f6c92f5);
+
+}
+
+#ptichka,
+#delete{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+
+}
+
+p{
+    color: #9E78CF;
+    font-size:16px;
+    font-weight: 400px;
+}
