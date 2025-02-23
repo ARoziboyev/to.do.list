@@ -2,7 +2,8 @@ const inputs = document.getElementById('inputs')
 const inp1 = document.getElementById('inp1')
 const btn1 = document.getElementById('btn1')
 const wrapper = document.getElementById('wrapper')
-
+const chek = document.getElementById('chek')
+const pp = document.getElementById("pp")
 btn1&&btn1.addEventListener('click', function(){
     window.location.reload()
 })
@@ -10,6 +11,7 @@ btn1&&btn1.addEventListener('click', function(){
 function validate(inp1) {
     if (inp1.value.trim() == '') {
         alert('Iltimos, matnni kiriting');
+        return
     }
     return true; 
 }
@@ -17,9 +19,12 @@ function validate(inp1) {
 function creetCard(user) {
     return` <div id="wrapper">
             <div class="card">
-                <p>${user.inp1}</p>
-              <button data-id = ${user.id}  id="delete"> <img src="imegs/ptichka.svg" width="30" height="30" alt=""></button>
-                <button data-id = ${user.id}  id="delete"><img src="imegs/delet.svg" width="30" height="30" alt=""></button>
+            <input type="checkbox" name="" id="chek">
+                <p id = "pp">${user.inp1}</p>
+              <div class="btns">
+              <button data-id = ${user.id}  id="delete"> <img src="imegs/edit.svg" width="25" height="25" alt=""></button>
+                <button data-id = ${user.id}  id="delete"><img src="imegs/delet.svg" width="25" height="25" alt=""></button>
+              </div>
                 </div>
                 </div>`
             }
@@ -47,6 +52,7 @@ function creetCard(user) {
 
                 inputs.reset();
 })
+
 
 
 document.addEventListener('DOMContentLoaded',function(){
@@ -79,9 +85,15 @@ remuButtons.length > 0 && remuButtons.forEach(btn =>{
         }
 
         localStorage.setItem('users', JSON.stringify(users))
-        alert("bajarildi")
         alert("Rosdan ham o'chirasizmi")
         this.parentNode.parentNode.remove()
+
+        const checkbox = document.getElementById("check");
+        const pp = document.getElementById("pp");
+      
+        checkbox.addEventListener("change", function () {
+          pp.style.textDecoration = this.checked ? "line-through" : "none";
+        });
 
     })
 })
